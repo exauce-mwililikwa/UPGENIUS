@@ -72,7 +72,7 @@ class _LoginState extends State<Login> {
                           ),
                         ),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
                               padding: EdgeInsets.only(top: 10),
@@ -173,7 +173,7 @@ class _LoginState extends State<Login> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                  'dont any account',
+                                  'dont any account?',
                                   style: TextStyle(fontFamily: 'Montserrat'),
                                 ),
                                 SizedBox(width: 5.0),
