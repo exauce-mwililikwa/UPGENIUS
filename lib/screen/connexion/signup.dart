@@ -13,7 +13,7 @@ class _SignUpState extends State<SignUp> {
       child: Scaffold(
         body: Container(
           decoration: BoxDecoration(
-            color: Colors.black,
+            color: Color(0xFFF5F5F5),
           ),
           child: ListView(
             children: [
@@ -43,7 +43,7 @@ class _SignUpState extends State<SignUp> {
                                 },
                                 child: Icon(
                                   Icons.arrow_back,
-                                  color: Colors.white,
+                                  color: Colors.black,
                                 ),
                               ),
                               // child: Icon(
@@ -54,9 +54,9 @@ class _SignUpState extends State<SignUp> {
                             ),
                             Container(
                               child: Text(
-                                'SIgn Up',
+                                'Sign Up',
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   fontSize: 33,
                                 ),
                               ),
@@ -99,7 +99,7 @@ class _SignUpState extends State<SignUp> {
                                     labelText: 'Nom',
                                     labelStyle: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.black,
+                                      color: Colors.black45,
                                     )),
                               ),
                             ),
@@ -125,7 +125,7 @@ class _SignUpState extends State<SignUp> {
                                     labelText: 'Postnom',
                                     labelStyle: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.black,
+                                      color: Colors.black45,
                                     )),
                               ),
                             ),
@@ -151,7 +151,7 @@ class _SignUpState extends State<SignUp> {
                                     labelText: 'Email',
                                     labelStyle: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.black,
+                                      color: Colors.black45,
                                     )),
                               ),
                             ),
@@ -178,7 +178,7 @@ class _SignUpState extends State<SignUp> {
                                     labelText: 'Mot de passe',
                                     labelStyle: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.black,
+                                      color: Colors.black45,
                                     )),
                               ),
                             ),
@@ -205,7 +205,7 @@ class _SignUpState extends State<SignUp> {
                                     labelText: 'Confimer le mot de passe',
                                     labelStyle: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.black,
+                                      color: Colors.black45,
                                     )),
                               ),
                             ),
@@ -228,14 +228,17 @@ class _SignUpState extends State<SignUp> {
                                 ),
                               ),
                             ),
+                            SizedBox(
+                              height: 15,
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                Text('Already have any account?'),
+                                Text('J\'ai deja mon compte?'),
                                 InkWell(
                                   onTap: () {},
                                   child: Text(
-                                    'Sign in',
+                                    'Login',
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontWeight: FontWeight.bold,
