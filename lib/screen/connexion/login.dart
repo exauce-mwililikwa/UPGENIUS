@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'signup.dart';
 
 class Login extends StatefulWidget {
@@ -75,7 +76,7 @@ class _LoginState extends State<Login> {
                         Container(
                           padding: EdgeInsets.all(15),
                           width: MediaQuery.of(context).size.width,
-                          height: MediaQuery.of(context).size.height / 1.5,
+                          height: MediaQuery.of(context).size.height / 1,
                           decoration: BoxDecoration(
                             color: Color(0xFFF5F5F5),
                             borderRadius: BorderRadius.only(
@@ -85,6 +86,8 @@ class _LoginState extends State<Login> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
+                             
+                        
                               Container(
                                 // padding: EdgeInsets.only(top: 1),
                                 child: Text(
@@ -92,6 +95,20 @@ class _LoginState extends State<Login> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 37),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                               Container(
+                                //    alignment: Alignment.center,
+                                child: Text(
+                                  // TextAlign.center,
+                                  'Entrer votre identifiant et votre mot de passe pour vous connecter',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                  ),
+                                  textAlign: TextAlign.center,
                                 ),
                               ),
                               SizedBox(
@@ -164,6 +181,10 @@ class _LoginState extends State<Login> {
                                     Expanded(
                                       child: TextField(
                                         obscureText: true,
+                                        // inputFormatters: [
+                                        //   new LengthLimitingTextInputFormatter(
+                                        //       4),
+                                        // ],
                                         decoration: InputDecoration(
                                             border: InputBorder.none,
                                             labelText: 'Mot de passe',
@@ -178,6 +199,9 @@ class _LoginState extends State<Login> {
                                 ),
                               ),
                               Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(12))),
                                 padding: EdgeInsets.only(top: 25),
                                 child: RaisedButton(
                                   color: Theme.of(context).accentColor,
