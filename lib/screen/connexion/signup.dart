@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:upGenius/screen/connexion/login.dart';
 
 class SignUp extends StatefulWidget {
   @override
@@ -14,7 +15,7 @@ class _SignUpState extends State<SignUp> {
           decoration: BoxDecoration(
             color: Colors.black,
           ),
-          child: Column(
+          child: ListView(
             children: [
               Container(
                 child: SingleChildScrollView(
@@ -26,10 +27,43 @@ class _SignUpState extends State<SignUp> {
                         width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.height / 9,
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
-                            Icon(
-                              Icons.arrow_back,
-                              color: Colors.white,
+                            Container(
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return Login();
+                                      },
+                                    ),
+                                  );
+                                },
+                                child: Icon(
+                                  Icons.arrow_back,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              // child: Icon(
+                              //   Icons.arrow_back,
+
+                              //   color: Colors.white,
+                              // ),
+                            ),
+                            Container(
+                              child: Text(
+                                'SIgn Up',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 33,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 20.0,
+                              width: 20.0,
                             ),
                           ],
                         ),
@@ -62,7 +96,7 @@ class _SignUpState extends State<SignUp> {
                               child: TextField(
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    labelText: 'Firstname',
+                                    labelText: 'Nom',
                                     labelStyle: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black,
@@ -88,7 +122,7 @@ class _SignUpState extends State<SignUp> {
                               child: TextField(
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    labelText: 'Lastname',
+                                    labelText: 'Postnom',
                                     labelStyle: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black,
@@ -141,7 +175,7 @@ class _SignUpState extends State<SignUp> {
                                 obscureText: true,
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    labelText: 'Password',
+                                    labelText: 'Mot de passe',
                                     labelStyle: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black,
@@ -168,7 +202,7 @@ class _SignUpState extends State<SignUp> {
                                 obscureText: true,
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    labelText: 'Confirm password',
+                                    labelText: 'Confimer le mot de passe',
                                     labelStyle: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black,
@@ -195,6 +229,7 @@ class _SignUpState extends State<SignUp> {
                               ),
                             ),
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Text('Already have any account?'),
                                 InkWell(
