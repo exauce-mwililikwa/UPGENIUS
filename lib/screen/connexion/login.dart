@@ -86,8 +86,6 @@ class _LoginState extends State<Login> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                             
-                        
                               Container(
                                 // padding: EdgeInsets.only(top: 1),
                                 child: Text(
@@ -100,7 +98,7 @@ class _LoginState extends State<Login> {
                               SizedBox(
                                 height: 15,
                               ),
-                               Container(
+                              Container(
                                 //    alignment: Alignment.center,
                                 child: Text(
                                   // TextAlign.center,
@@ -133,7 +131,10 @@ class _LoginState extends State<Login> {
                                     ]),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.person),
+                                    Icon(
+                                      Icons.person,
+                                      color: Colors.black38,
+                                    ),
                                     SizedBox(
                                       width: 10,
                                     ),
@@ -141,7 +142,7 @@ class _LoginState extends State<Login> {
                                       child: TextField(
                                         decoration: InputDecoration(
                                             border: InputBorder.none,
-                                            labelText: 'Identifiant',
+                                            labelText: 'Identifiant ',
                                             labelStyle: TextStyle(
                                               // fontWeight: FontWeight.bold,
                                               color: Colors.black45,
@@ -174,11 +175,15 @@ class _LoginState extends State<Login> {
                                     ]),
                                 child: Row(
                                   children: [
-                                    Icon(Icons.lock),
+                                    Icon(
+                                      Icons.lock,
+                                      color: Colors.black38,
+                                    ),
                                     SizedBox(
                                       width: 10,
                                     ),
                                     Expanded(
+                                      
                                       child: TextField(
                                         obscureText: true,
                                         // inputFormatters: [
@@ -221,6 +226,7 @@ class _LoginState extends State<Login> {
                                   ),
                                 ),
                               ),
+                              
                               // Spacer(),
                               SizedBox(
                                 height: 30,
@@ -232,14 +238,7 @@ class _LoginState extends State<Login> {
                                   Text('Avez vous deja un compte?'),
                                   InkWell(
                                     onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) {
-                                            return SignUp();
-                                          },
-                                        ),
-                                      );
+                                     
                                     },
                                     child: Text(
                                       'Creer',
@@ -248,7 +247,9 @@ class _LoginState extends State<Login> {
                                           fontWeight: FontWeight.bold,
                                           decoration: TextDecoration.underline),
                                     ),
-                                  )
+                                    
+                                  ),
+                                  
                                 ],
                               )
                             ],

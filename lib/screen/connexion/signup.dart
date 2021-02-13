@@ -46,7 +46,7 @@ class _SignUpState extends State<SignUp> {
                         ),
                         Container(
                           child: Text(
-                            'Sign up',
+                            'Sign up ',
                             style: TextStyle(
                               fontSize: 34,
                             ),
