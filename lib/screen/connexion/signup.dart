@@ -24,6 +24,7 @@ class _SignUpState extends State<SignUp> {
                     child: Column(
                       children: [
                         Center(
+                          
                           child: Container(
                             alignment: Alignment.topLeft,
                             //  // padding: EdgeInsets.all(12),

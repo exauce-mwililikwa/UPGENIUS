@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:upGenius/screen/home/dashboard.dart';
+import 'package:upGenius/screen/home/dashboard1.dart';
 import 'signup.dart';
 
 class Login extends StatefulWidget {
@@ -34,13 +36,13 @@ class _LoginState extends State<Login> {
                   child: SingleChildScrollView(
                     physics: BouncingScrollPhysics(),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      // mainAxisAlignment: MainAxisAlignment.center,
+                      // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
                           padding: EdgeInsets.all(15),
                           width: MediaQuery.of(context).size.width,
-                          // height: MediaQuery.of(context).size.height / 5,
+                          height: MediaQuery.of(context).size.height / 5,
                           alignment: Alignment.center,
                           child: Container(
                             padding: EdgeInsets.all(25),
@@ -76,7 +78,7 @@ class _LoginState extends State<Login> {
                         Container(
                           padding: EdgeInsets.all(15),
                           width: MediaQuery.of(context).size.width,
-                          height: MediaQuery.of(context).size.height / 1,
+                          height: MediaQuery.of(context).size.height / 1.4,
                           decoration: BoxDecoration(
                             color: Color(0xFFF5F5F5),
                             borderRadius: BorderRadius.only(
@@ -183,7 +185,6 @@ class _LoginState extends State<Login> {
                                       width: 10,
                                     ),
                                     Expanded(
-                                      
                                       child: TextField(
                                         obscureText: true,
                                         // inputFormatters: [
@@ -210,7 +211,16 @@ class _LoginState extends State<Login> {
                                 padding: EdgeInsets.only(top: 25),
                                 child: RaisedButton(
                                   color: Theme.of(context).accentColor,
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return Dashboard1();
+                                        },
+                                      ),
+                                    );
+                                  },
                                   child: Container(
                                     padding: EdgeInsets.all(10),
                                     alignment: Alignment.center,
@@ -226,7 +236,7 @@ class _LoginState extends State<Login> {
                                   ),
                                 ),
                               ),
-                              
+
                               // Spacer(),
                               SizedBox(
                                 height: 30,
@@ -238,7 +248,14 @@ class _LoginState extends State<Login> {
                                   Text('Avez vous deja un compte?'),
                                   InkWell(
                                     onTap: () {
-                                     
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) {
+                                            return SignUp();
+                                          },
+                                        ),
+                                      );
                                     },
                                     child: Text(
                                       'Creer',
@@ -247,9 +264,7 @@ class _LoginState extends State<Login> {
                                           fontWeight: FontWeight.bold,
                                           decoration: TextDecoration.underline),
                                     ),
-                                    
-                                  ),
-                                  
+                                  )
                                 ],
                               )
                             ],
