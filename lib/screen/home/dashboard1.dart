@@ -81,7 +81,7 @@ class _Dashboard1State extends State<Dashboard1> {
       child: Scaffold(
         body: Container(
           decoration: BoxDecoration(
-            color: Color(0xFFF5F5F5),
+            color: Colors.white,
           ),
           child: Column(
             children: [
@@ -92,7 +92,8 @@ class _Dashboard1State extends State<Dashboard1> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 24, left: 5, right: 5),
+                        margin: EdgeInsets.only(
+                            top: 24, left: 5, right: 5, bottom: 34),
                         // margin: EdgeInsets.all(7),
                         child: Column(
                           children: [
@@ -100,7 +101,7 @@ class _Dashboard1State extends State<Dashboard1> {
                               children: [
                                 Container(
                                   width:
-                                      MediaQuery.of(context).size.width / 1.18,
+                                      MediaQuery.of(context).size.width / 1.2,
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
@@ -123,12 +124,13 @@ class _Dashboard1State extends State<Dashboard1> {
                                   ),
                                 ),
                                 Container(
-                                  height: 19,
-                                  width: 19,
-                                  //    width: MediaQuery.of(context).size.width / 2,
-                                  child: Image.asset(
-                                    "assets/images/profil.png",
+                                  child: CircleAvatar(
+                                    backgroundImage:
+                                        AssetImage('assets/images/profil.png'),
+                                    // child:
+                                    //     Image.asset('assets/images/profil.png'),
                                   ),
+                                  //    width: MediaQuery.of(context).size.width / 2,
                                 ),
                               ],
                             ),
@@ -154,8 +156,16 @@ class _Dashboard1State extends State<Dashboard1> {
                       Container(
                         child: Row(
                           children: [
-                            typetext("PROGRAMMES", "User_Male_96px.png", 57),
-                            typetext("MACABET", "Idea_96px.png", 42)
+                            typetext("PROGRAMMES", "Surprised_96px.png", 57),
+                            typetext("MACABET", "Windows XP_96px.png", 42)
+                          ],
+                        ),
+                      ),
+                      Container(
+                        child: Row(
+                          children: [
+                            typetext("PROGRAMMES", "Book_96px.png", 57),
+                            typetext("MACABET", "Nerd_96px.png", 42)
                           ],
                         ),
                       ),
