@@ -144,7 +144,7 @@ class _Dashboard1State extends State<Dashboard1> {
                         child: Row(
                           children: [
                             typetext("PROGRAMMES", "Gallery_96px.png", 57),
-                            typetext("MACABETS", "Gallery_96px.png", 42)
+                            typetext("MACABETS", "Gallery_96p.png", 42)
                           ],
                         ),
                       ),
