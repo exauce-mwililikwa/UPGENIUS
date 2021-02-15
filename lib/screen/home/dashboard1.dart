@@ -32,13 +32,8 @@ class _Dashboard1State extends State<Dashboard1> {
         body: Container(
           child: Column(
             children: [
-              Expanded(
-                child: SingleChildScrollView(
-                  physics: BouncingScrollPhysics(),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
+          //    Container(
+                Container(
                         margin: EdgeInsets.only(
                             top: 24, left: 5, right: 5, bottom: 34),
                         // margin: EdgeInsets.all(7),
@@ -84,6 +79,14 @@ class _Dashboard1State extends State<Dashboard1> {
                           ],
                         ),
                       ),
+             // ),
+              Expanded(
+                child: SingleChildScrollView(
+                  physics: BouncingScrollPhysics(),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      
                       Wrap(
                         children: List.generate(
                           cours.length,
@@ -105,7 +108,7 @@ class _Dashboard1State extends State<Dashboard1> {
   Widget typetext(String typeName, String photo, int nombreQuestion) {
     return Container(
       margin: EdgeInsets.only(top: 10, left: 5, right: 5),
-      padding: EdgeInsets.only(top: 20, left: 5, right: 5),
+      padding: EdgeInsets.only(top: 20, left: 5, right: 5, bottom: 20),
       //height: MediaQuery.of(context).size.height / 4,
       width: MediaQuery.of(context).size.width / 2 - 20,
       decoration: BoxDecoration(
@@ -159,6 +162,7 @@ class _Dashboard1State extends State<Dashboard1> {
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
+                textAlign: TextAlign.center,
               ),
             ),
             SizedBox(
