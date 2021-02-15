@@ -42,9 +42,9 @@ class _Dashboard1State extends State<Dashboard1> {
         child: Column(
           children: [
             Container(
-              child: Icon(
-                icont,
-                color: Colors.black,
+              height: 34,
+              child: Image.asset(
+                "assets/images/Gallery_96px.png",
               ),
             ),
             SizedBox(
