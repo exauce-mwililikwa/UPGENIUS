@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:upGenius/screen/home/dashboard.dart';
+// import 'package:flutter/services.dart';
+// import 'package:upGenius/screen/home/dashboard.dart';
 import 'package:upGenius/screen/home/dashboard1.dart';
 import 'signup.dart';
 

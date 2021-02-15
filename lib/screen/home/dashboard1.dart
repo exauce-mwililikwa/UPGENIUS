@@ -7,20 +7,43 @@ class Dashboard1 extends StatefulWidget {
 }
 
 class _Dashboard1State extends State<Dashboard1> {
-  Widget typetext(String typeName, String photo, int nombre_question) {
+  List<String> images = [
+    "Surprised_96px.png",
+    "Book_96px.png",
+    "Gallery_96px.png",
+    "Literature_96px.png",
+    "Windows XP_96px.png",
+  ];
+
+  List<String> cours = [
+    "Programmation",
+    "Mathematique",
+    "Logique",
+    "Education",
+    "Autres",
+  ];
+
+  List<int> nombre = [3, 8, 10, 20, 1];
+
+  Widget typetext(String typeName, String photo, int nombreQuestion) {
     return Container(
-      margin: EdgeInsets.only(top: 5, left: 5, right: 5),
+      margin: EdgeInsets.only(top: 10, left: 5, right: 5),
       padding: EdgeInsets.only(top: 20, left: 5, right: 5),
       height: MediaQuery.of(context).size.height / 4,
-      width: MediaQuery.of(context).size.width / 2.15,
+      width: MediaQuery.of(context).size.width / 2 - 20,
       decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: <BoxShadow>[
             BoxShadow(
               color: Colors.black12,
-              offset: Offset(7, 4),
-              blurRadius: 12,
-            )
+              offset: Offset(5, 3),
+              blurRadius: 3,
+            ),
+            BoxShadow(
+              color: Colors.black12,
+              offset: Offset(5, 3),
+              blurRadius: 3,
+            ),
           ],
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(12),
@@ -63,7 +86,7 @@ class _Dashboard1State extends State<Dashboard1> {
             ),
             Container(
               child: Text(
-                '$nombre_question Question',
+                '$nombreQuestion Question',
                 style: TextStyle(
                   color: Colors.black,
                 ),
@@ -138,53 +161,11 @@ class _Dashboard1State extends State<Dashboard1> {
                         ),
                       ),
                       Wrap(
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                typetext("PARAMETRES", "Idea_96px.png", 34),
-                                typetext("NOTES", "Book_96px.png", 54)
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Wrap(
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                typetext("ERREUR", "Nerd_96px.png", 34),
-                                typetext("PROGRAMME", "Planner_96px.png", 54)
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Wrap(
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                typetext(
-                                    "PARAMETRES", "Windows XP_96px.png", 34),
-                                typetext("MACABETS", "Literature_96px.png", 54)
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Wrap(
-                        children: [
-                          Container(
-                            child: Row(
-                              children: [
-                                typetext("QUESTIONS", "Surprised_96px.png", 34),
-                                typetext("PROFIL", "User_Male_96px.png", 54)
-                              ],
-                            ),
-                          ),
-                        ],
+                        children: List.generate(
+                          cours.length,
+                          (index) => typetext(
+                              cours[index], images[index], nombre[index]),
+                        ),
                       ),
                     ],
                   ),
