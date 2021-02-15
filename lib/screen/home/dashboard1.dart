@@ -7,7 +7,7 @@ class Dashboard1 extends StatefulWidget {
 }
 
 class _Dashboard1State extends State<Dashboard1> {
-  Widget typetext(String typeName, IconData icont, int nombre_question) {
+  Widget typetext(String typeName, String photo, int nombre_question) {
     return Container(
       margin: EdgeInsets.only(top: 5, left: 5, right: 5),
       padding: EdgeInsets.only(top: 20, left: 5, right: 5),
@@ -44,7 +44,7 @@ class _Dashboard1State extends State<Dashboard1> {
             Container(
               height: 34,
               child: Image.asset(
-                "assets/images/Gallery_96px.png",
+                "assets/images/$photo",
               ),
             ),
             SizedBox(
@@ -135,18 +135,16 @@ class _Dashboard1State extends State<Dashboard1> {
                       Container(
                         child: Row(
                           children: [
-                            typetext("PARAMETRES", Icons.ac_unit, 34),
-                            typetext("NOTES",
-                                Icons.account_balance_wallet_outlined, 54)
+                            typetext("PARAMETRES", "Gallery_96px.png", 34),
+                            typetext("NOTES", "Gallery_96px.png", 54)
                           ],
                         ),
                       ),
                       Container(
                         child: Row(
                           children: [
-                            typetext(
-                                "PROGRAMMES", Icons.access_alarms_rounded, 57),
-                            typetext("MACABETS", Icons.account_balance, 42)
+                            typetext("PROGRAMMES", "Gallery_96px.png", 57),
+                            typetext("MACABETS", "Gallery_96px.png", 42)
                           ],
                         ),
                       ),
