@@ -16,7 +16,7 @@ class _Dashboard1State extends State<Dashboard1> {
   ];
 
   List<String> cours = [
-    "Programmation",
+    "Programation",
     "Mathematique",
     "Logique",
     "Education",
@@ -106,7 +106,7 @@ class _Dashboard1State extends State<Dashboard1> {
     return Container(
       margin: EdgeInsets.only(top: 10, left: 5, right: 5),
       padding: EdgeInsets.only(top: 20, left: 5, right: 5),
-      height: MediaQuery.of(context).size.height / 4,
+      //height: MediaQuery.of(context).size.height / 4,
       width: MediaQuery.of(context).size.width / 2 - 20,
       decoration: BoxDecoration(
           color: Colors.white,
@@ -142,7 +142,8 @@ class _Dashboard1State extends State<Dashboard1> {
         child: Column(
           children: [
             Container(
-              height: 34,
+              height: 44,
+              width: 74,
               child: Image.asset(
                 "assets/images/$photo",
               ),
@@ -155,6 +156,8 @@ class _Dashboard1State extends State<Dashboard1> {
                 typeName,
                 style: TextStyle(
                   color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
@@ -165,7 +168,9 @@ class _Dashboard1State extends State<Dashboard1> {
               child: Text(
                 '$nombreQuestion Question',
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.black87,
+                  //fontWeight: FontWeight.bold,
+                  fontSize: 13,
                 ),
               ),
             ),
