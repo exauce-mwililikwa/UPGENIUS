@@ -7,9 +7,7 @@ class UpGenius extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        backgroundColor: Colors.red,
-        primaryColor: Colors.red,
-        bottomAppBarColor: Colors.red,
+        scaffoldBackgroundColor: Color(0xFFF5F5F5),
       ),
       home: Login(),
     );

@@ -25,6 +25,83 @@ class _Dashboard1State extends State<Dashboard1> {
 
   List<int> nombre = [3, 8, 10, 20, 1];
 
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+          child: Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  physics: BouncingScrollPhysics(),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(
+                            top: 24, left: 5, right: 5, bottom: 34),
+                        // margin: EdgeInsets.all(7),
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  width:
+                                      MediaQuery.of(context).size.width / 1.2,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        alignment: Alignment.topLeft,
+                                        child: Text(
+                                          'Exauce mwililikwa',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 21,
+                                          ),
+                                          textAlign: TextAlign.end,
+                                        ),
+                                      ),
+                                      Container(
+                                          alignment: Alignment.topLeft,
+                                          child: Text('Etudiant',
+                                              textAlign: TextAlign.left)),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  child: CircleAvatar(
+                                    backgroundImage:
+                                        AssetImage('assets/images/profil.png'),
+                                    // child:
+                                    //     Image.asset('assets/images/profil.png'),
+                                  ),
+                                  //    width: MediaQuery.of(context).size.width / 2,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Wrap(
+                        children: List.generate(
+                          cours.length,
+                          (index) => typetext(
+                              cours[index], images[index], nombre[index]),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget typetext(String typeName, String photo, int nombreQuestion) {
     return Container(
       margin: EdgeInsets.only(top: 10, left: 5, right: 5),
@@ -93,86 +170,6 @@ class _Dashboard1State extends State<Dashboard1> {
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-          ),
-          child: Column(
-            children: [
-              Expanded(
-                child: SingleChildScrollView(
-                  physics: BouncingScrollPhysics(),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(
-                            top: 24, left: 5, right: 5, bottom: 34),
-                        // margin: EdgeInsets.all(7),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  width:
-                                      MediaQuery.of(context).size.width / 1.2,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        alignment: Alignment.topLeft,
-                                        child: Text(
-                                          'Exauce mwililikwa',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 21,
-                                          ),
-                                          textAlign: TextAlign.end,
-                                        ),
-                                      ),
-                                      Container(
-                                          alignment: Alignment.topLeft,
-                                          child: Text('Etudiant',
-                                              textAlign: TextAlign.left)),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  child: CircleAvatar(
-                                    backgroundImage:
-                                        AssetImage('assets/images/profil.png'),
-                                    // child:
-                                    //     Image.asset('assets/images/profil.png'),
-                                  ),
-                                  //    width: MediaQuery.of(context).size.width / 2,
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      Wrap(
-                        children: List.generate(
-                          cours.length,
-                          (index) => typetext(
-                              cours[index], images[index], nombre[index]),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              )
-            ],
-          ),
         ),
       ),
     );
