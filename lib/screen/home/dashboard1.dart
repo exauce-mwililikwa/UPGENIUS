@@ -12,7 +12,7 @@ class _Dashboard1State extends State<Dashboard1> {
       margin: EdgeInsets.only(top: 5, left: 5, right: 5),
       padding: EdgeInsets.only(top: 20, left: 5, right: 5),
       height: MediaQuery.of(context).size.height / 4,
-      width: MediaQuery.of(context).size.width / 2.1,
+      width: MediaQuery.of(context).size.width / 2.15,
       decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: <BoxShadow>[
