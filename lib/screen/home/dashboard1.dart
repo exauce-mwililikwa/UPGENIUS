@@ -137,37 +137,54 @@ class _Dashboard1State extends State<Dashboard1> {
                           ],
                         ),
                       ),
-                      Container(
-                        child: Row(
-                          children: [
-                            typetext("PARAMETRES", "Gallery_96px.png", 34),
-                            typetext("NOTES", "Planner_96px.png", 54)
-                          ],
-                        ),
+                      Wrap(
+                        children: [
+                          Container(
+                            child: Row(
+                              children: [
+                                typetext("PARAMETRES", "Idea_96px.png", 34),
+                                typetext("NOTES", "Book_96px.png", 54)
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-                      Container(
-                        child: Row(
-                          children: [
-                            typetext("PROGRAMMES", "User_Male_96px.png", 57),
-                            typetext("MACABET", "Idea_96px.png", 42)
-                          ],
-                        ),
+                      Wrap(
+                        children: [
+                          Container(
+                            child: Row(
+                              children: [
+                                typetext("ERREUR", "Nerd_96px.png", 34),
+                                typetext("PROGRAMME", "Planner_96px.png", 54)
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-                      Container(
-                        child: Row(
-                          children: [
-                            typetext("PROGRAMMES", "Surprised_96px.png", 57),
-                            typetext("MACABET", "Windows XP_96px.png", 42)
-                          ],
-                        ),
+                      Wrap(
+                        children: [
+                          Container(
+                            child: Row(
+                              children: [
+                                typetext(
+                                    "PARAMETRES", "Windows XP_96px.png", 34),
+                                typetext("MACABETS", "Literature_96px.png", 54)
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-                      Container(
-                        child: Row(
-                          children: [
-                            typetext("PROGRAMMES", "Book_96px.png", 57),
-                            typetext("MACABET", "Nerd_96px.png", 42)
-                          ],
-                        ),
+                      Wrap(
+                        children: [
+                          Container(
+                            child: Row(
+                              children: [
+                                typetext("QUESTIONS", "Surprised_96px.png", 34),
+                                typetext("PROFIL", "User_Male_96px.png", 54)
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
