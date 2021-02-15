@@ -123,9 +123,12 @@ class _Dashboard1State extends State<Dashboard1> {
                                   ),
                                 ),
                                 Container(
+                                  height: 19,
+                                  width: 19,
                                   //    width: MediaQuery.of(context).size.width / 2,
-                                  child: Icon(
-                                      Icons.photo_size_select_actual_rounded),
+                                  child: Image.asset(
+                                    "assets/images/profil.png",
+                                  ),
                                 ),
                               ],
                             ),
@@ -137,6 +140,14 @@ class _Dashboard1State extends State<Dashboard1> {
                           children: [
                             typetext("PARAMETRES", "Gallery_96px.png", 34),
                             typetext("NOTES", "Planner_96px.png", 54)
+                          ],
+                        ),
+                      ),
+                      Container(
+                        child: Row(
+                          children: [
+                            typetext("PROGRAMMES", "User_Male_96px.png", 57),
+                            typetext("MACABET", "Idea_96px.png", 42)
                           ],
                         ),
                       ),
