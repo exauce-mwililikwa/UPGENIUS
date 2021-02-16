@@ -14,63 +14,10 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
           child: Column(
             children: [
               Container(
-                child: Column(
-                  children: [
-                    Container(
-                      child: Text(
-                        'Java Script',
-                        style: TextStyle(
-                          fontSize: 27,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      child: Row(
-                        children: [
-                          Container(
-                            child: Column(
-                              children: [
-                                Container(
-                                  child: Text(
-                                    '456',
-                                  ),
-                                ),
-                                Container(
-                                  child: Text('Proffeseurs'),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            child: Column(
-                              children: [
-                                Container(
-                                  child: Text('45'),
-                                ),
-                                Container(
-                                  child: Text('Questionnaires'),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            alignment: Alignment.topRight,
-                            child: Column(
-                              children: [
-                                Container(
-                                  child: Text('45'),
-                                ),
-                                Container(
-                                  child: Text('Repondant'),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                decoration: BoxDecoration(
+                  color: Colors.red,
                 ),
+                child: Column(children: []),
               ),
               Expanded(
                   child: SingleChildScrollView(
@@ -85,11 +32,20 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                               top: 20, left: 5, right: 5, bottom: 20),
                           decoration: BoxDecoration(
                               color: Colors.white,
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(19),
+                                bottomLeft: Radius.circular(19),
+                                topRight: Radius.circular(19),
+                                bottomRight: Radius.circular(19),
+                              ),
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
                                   color: Colors.black12,
-                                  offset: Offset(3, 2),
-                                  
+                                  offset: Offset(3, 6),
+                                ),
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  offset: Offset(3, 6),
                                 )
                               ]),
                           child: Row(
@@ -97,8 +53,11 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                               Container(
                                 height: 40,
                                 width: 40,
-                                child:
-                                    Image.asset('assets/images/Java_48px.png'),
+                                child: Image.asset(
+                                    'assets/images/Html 5_48px.png'),
+                              ),
+                              SizedBox(
+                                width: 20,
                               ),
                               Container(
                                 child: Column(
@@ -125,6 +84,9 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                                           ),
                                         ],
                                       ),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
                                     ),
                                     Container(
                                       alignment: Alignment.topLeft,
@@ -217,6 +179,26 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                                         ],
                                       ),
                                     ),
+                                    SizedBox(
+                                      height: 12,
+                                    ),
+                                    Container(
+                                        margin: EdgeInsets.only(left: 125),
+                                        child: Column(
+                                          //  mainAxisAlignment: MainAxisAlignment.end,
+                                          children: [
+                                            InkWell(
+                                              child: Text(
+                                                'Consulter...',
+                                                textAlign: TextAlign.end,
+                                                style: TextStyle(
+                                                  fontSize: 16,
+                                                  color: Colors.blue,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        )),
                                   ],
                                 ),
                               ),
