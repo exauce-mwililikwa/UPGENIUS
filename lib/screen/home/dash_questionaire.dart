@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:upGenius/screen/utils/utils.dart';
 
 class DashQuestionnaire extends StatefulWidget {
   @override
   _DashQuestionnaireState createState() => _DashQuestionnaireState();
 }
+
+var ut = Utils();
 
 class _DashQuestionnaireState extends State<DashQuestionnaire> {
   @override
@@ -22,20 +25,17 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                   ),
                 ),
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 3,
+                height: MediaQuery.of(context).size.height / 3.5,
                 padding: EdgeInsets.only(left: 15, right: 15),
                 child: Column(
                   children: [
-                    Container(
-                      child: Text('Programmation'),
-                    ),
                     Container(
                       child: Row(
                         children: [
                           Expanded(
                             child: TextField(
                               decoration: InputDecoration(
-                                  // border: InputBorder.none,
+                                  //border: InputBorder.none,
                                   labelText: 'Rechercher ici',
                                   labelStyle: TextStyle(
                                     // fontWeight: FontWeight.bold,
@@ -45,6 +45,103 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                             ),
                           ),
                           Icon(Icons.search),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Container(
+                      child: Text(
+                        'Programmation',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        //style: TextStyle(),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Container(
+                      child: Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(right: 65),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '1 150',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 12,
+                                ),
+                                Text(
+                                  'Cours',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(right: 45),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '150',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 12,
+                                ),
+                                Text(
+                                  'Proffesseurs',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '1 150',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 12,
+                                ),
+                                Text(
+                                  'Questions',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -58,182 +155,48 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                   children: [
                     Wrap(
                       children: [
+                        ut.travail("Html 5_48px.png", "14/02/2006", "02:43:43",
+                            "Prince Balolange", 2500, 43, 1240),
+                        ut.travail(
+                            "Android OS_48px.png",
+                            "14/02/2006",
+                            "02:43:43",
+                            "Mutindiapala Mwililikwa",
+                            200,
+                            23,
+                            140),
+                        ut.travail("HTML_Filetype_48px.png", "14/02/2006",
+                            "02:43:43", "Bahonga Pacifique", 500, 43, 1240),
+                        ut.travail("Java_48px.png", "14/02/2006", "12:43:43",
+                            "Prince Balolange", 2500, 43, 1240),
+                        ut.travail("JS_48px.png", "14/02/2006", "22:13:43",
+                            "Prince Balolange", 20, 12, 140),
+                        ut.travail("PHP_48px.png", "14/02/2006", "12:33:23",
+                            "Dan Dan", 250, 43, 140),
+                        ut.travail("Python_48px.png", "14/02/2006", "09:23:23",
+                            "Joseph Kalema", 200, 23, 40),
+                        ut.travail("Html 5_48px.png", "14/02/2006", "12:23:23",
+                            "Prince Balolange", 2500, 43, 1240),
+                        ut.travail("Code File_48px.png", "14/02/2006",
+                            "02:43:43", "Prince Balolange", 2500, 43, 1240),
+                        ut.travail("Html 5_48px.png", "14/02/2006", "12:13:03",
+                            "Prince Balolange", 2500, 43, 1240),
+                        ut.travail("Html 5_48px.png", "14/02/2006", "12:23:13",
+                            "Prince Balolange", 2500, 43, 1240),
+                        ut.travail("PHP_48px.png", "14/02/2006", "12:53:23",
+                            "Joel Katoro", 2500, 43, 1240),
                         Container(
-                          margin: EdgeInsets.only(top: 20, left: 5, right: 5),
-                          padding: EdgeInsets.only(
-                              top: 20, left: 5, right: 5, bottom: 20),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(19),
-                                bottomLeft: Radius.circular(19),
-                                topRight: Radius.circular(19),
-                                bottomRight: Radius.circular(19),
-                              ),
-                              boxShadow: <BoxShadow>[
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  offset: Offset(3, 6),
-                                ),
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  offset: Offset(3, 6),
-                                )
-                              ]),
                           child: Row(
                             children: [
-                              Container(
-                                height: 40,
-                                width: 40,
-                                child: Image.asset(
-                                    'assets/images/Html 5_48px.png'),
+                              Text(
+                                'Previous',
+                                textAlign: TextAlign.start,
                               ),
-                              SizedBox(
-                                width: 20,
+                              Text(
+                                'Previous',
+                                textAlign: TextAlign.end,
                               ),
-                              Container(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      child: Row(
-                                        children: [
-                                          Icon(
-                                            Icons.calendar_today,
-                                            size: 12,
-                                          ),
-                                          Text('12/04/2009'),
-                                          SizedBox(
-                                            width: 22,
-                                          ),
-                                          Icon(
-                                            Icons.timer,
-                                            size: 12,
-                                          ),
-                                          Text(
-                                            '08:42:32',
-                                            // textAlign: TextAlign.end,
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 12,
-                                    ),
-                                    Container(
-                                      alignment: Alignment.topLeft,
-                                      child: Text(
-                                        'Mutindiapala Mwililikwa',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                        textAlign: TextAlign.start,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 12,
-                                    ),
-                                    Container(
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            child: Row(
-                                              children: [
-                                                Container(
-                                                  child: Icon(
-                                                    Icons.person_rounded,
-                                                    color: Colors.black45,
-                                                    size: 12,
-                                                  ),
-                                                ),
-                                                Container(
-                                                  child: Text(
-                                                    '1.865',
-                                                    style: TextStyle(
-                                                      color: Colors.black45,
-                                                      fontSize: 12,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            width: 12,
-                                          ),
-                                          Container(
-                                            child: Row(
-                                              children: [
-                                                Container(
-                                                  child: Icon(
-                                                    Icons.question_answer,
-                                                    color: Colors.black45,
-                                                    size: 12,
-                                                  ),
-                                                ),
-                                                Container(
-                                                  child: Text(
-                                                    ' 24',
-                                                    style: TextStyle(
-                                                      color: Colors.black45,
-                                                      fontSize: 12,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            width: 12,
-                                          ),
-                                          Container(
-                                            child: Row(
-                                              children: [
-                                                Container(
-                                                  child: Icon(
-                                                    Icons.verified,
-                                                    color: Colors.black45,
-                                                    size: 12,
-                                                  ),
-                                                ),
-                                                Container(
-                                                  child: Text(
-                                                    '750',
-                                                    style: TextStyle(
-                                                      color: Colors.black45,
-                                                      fontSize: 12,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 12,
-                                    ),
-                                    Container(
-                                        margin: EdgeInsets.only(left: 125),
-                                        child: Column(
-                                          //  mainAxisAlignment: MainAxisAlignment.end,
-                                          children: [
-                                            InkWell(
-                                              child: Text(
-                                                'Consulter...',
-                                                textAlign: TextAlign.end,
-                                                style: TextStyle(
-                                                  fontSize: 16,
-                                                  color: Colors.blue,
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        )),
-                                  ],
-                                ),
-                              ),
+                              // Container(),
                             ],
                           ),
                         ),
