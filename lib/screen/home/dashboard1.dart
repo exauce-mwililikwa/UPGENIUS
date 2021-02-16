@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dashboard.dart';
+import 'profil.dart';
+import 'dash_questionaire.dart';
 
 class Dashboard1 extends StatefulWidget {
   @override
@@ -32,61 +34,69 @@ class _Dashboard1State extends State<Dashboard1> {
         body: Container(
           child: Column(
             children: [
-          //    Container(
-                Container(
-                        margin: EdgeInsets.only(
-                            top: 24, left: 5, right: 5, bottom: 34),
-                        // margin: EdgeInsets.all(7),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  width:
-                                      MediaQuery.of(context).size.width / 1.2,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        alignment: Alignment.topLeft,
-                                        child: Text(
-                                          'Exauce mwililikwa',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 21,
-                                          ),
-                                          textAlign: TextAlign.end,
-                                        ),
-                                      ),
-                                      Container(
-                                          alignment: Alignment.topLeft,
-                                          child: Text('Etudiant',
-                                              textAlign: TextAlign.left)),
-                                    ],
+              //    Container(
+              Container(
+                margin: EdgeInsets.only(top: 24, left: 5, right: 5, bottom: 34),
+                // margin: EdgeInsets.all(7),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width / 1.2,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Container(
+                                alignment: Alignment.topLeft,
+                                child: Text(
+                                  'Exauce mwililikwa',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 21,
                                   ),
+                                  textAlign: TextAlign.end,
                                 ),
-                                Container(
-                                  child: CircleAvatar(
-                                    backgroundImage:
-                                        AssetImage('assets/images/profil.png'),
-                                    // child:
-                                    //     Image.asset('assets/images/profil.png'),
-                                  ),
-                                  //    width: MediaQuery.of(context).size.width / 2,
-                                ),
-                              ],
-                            ),
-                          ],
+                              ),
+                              Container(
+                                  alignment: Alignment.topLeft,
+                                  child: Text('Etudiant',
+                                      textAlign: TextAlign.left)),
+                            ],
+                          ),
                         ),
-                      ),
-             // ),
+                        Container(
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Profil();
+                                  },
+                                ),
+                              );
+                            },
+                            child: CircleAvatar(
+                              backgroundImage:
+                                  AssetImage('assets/images/profil.png'),
+                              //     Image.asset('assets/images/profil.png'),
+                            ),
+                          ),
+                          //    width: MediaQuery.of(context).size.width / 2,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              // ),
               Expanded(
                 child: SingleChildScrollView(
                   physics: BouncingScrollPhysics(),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      
                       Wrap(
                         children: List.generate(
                           cours.length,
@@ -108,7 +118,7 @@ class _Dashboard1State extends State<Dashboard1> {
   Widget typetext(String typeName, String photo, int nombreQuestion) {
     return Container(
       margin: EdgeInsets.only(top: 10, left: 5, right: 5),
-      padding: EdgeInsets.only(top: 20, left: 5, right: 5, bottom: 20),
+
       //height: MediaQuery.of(context).size.height / 4,
       width: MediaQuery.of(context).size.width / 2 - 20,
       decoration: BoxDecoration(
@@ -131,54 +141,59 @@ class _Dashboard1State extends State<Dashboard1> {
             topRight: Radius.circular(12),
             bottomRight: Radius.circular(12),
           )),
-      child: FlatButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return Dashboard();
-              },
-            ),
-          );
-        },
-        child: Column(
-          children: [
-            Container(
-              height: 44,
-              width: 74,
-              child: Image.asset(
-                "assets/images/$photo",
+      child: Container(
+        child: FlatButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return DashQuestionnaire();
+                },
               ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Container(
-              child: Text(
-                typeName,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+            );
+          },
+          child: Container(
+            padding: EdgeInsets.only(top: 20, left: 5, right: 5, bottom: 20),
+            child: Column(
+              children: [
+                Container(
+                  height: 44,
+                  width: 74,
+                  child: Image.asset(
+                    "assets/images/$photo",
+                  ),
                 ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Container(
-              child: Text(
-                '$nombreQuestion Question',
-                style: TextStyle(
-                  color: Colors.black87,
-                  //fontWeight: FontWeight.bold,
-                  fontSize: 13,
+                SizedBox(
+                  height: 12,
                 ),
-              ),
+                Container(
+                  child: Text(
+                    typeName,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                Container(
+                  child: Text(
+                    '$nombreQuestion Question',
+                    style: TextStyle(
+                      color: Colors.black87,
+                      //fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

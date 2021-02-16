@@ -56,11 +56,15 @@ class _DashboardState extends State<Dashboard> {
                               child: Row(
                                 children: [
                                   Container(
-                                    child: Icon(
-                                      Icons.photo_size_select_actual_rounded,
-                                      color: Colors.blue,
-                                      size: 12,
+                                    height: 15,
+                                    width: 15,
+                                    child: CircleAvatar(
+                                      backgroundImage: AssetImage(
+                                          'assets/images/profil.png'),
+                                      // child:
+                                      //     Image.asset('assets/images/profil.png'),
                                     ),
+                                    //    width: MediaQuery.of(context).size.width / 2,
                                   ),
                                   Container(
                                     child: Text(
@@ -101,6 +105,7 @@ class _DashboardState extends State<Dashboard> {
                               height: 12,
                             ),
                             Container(
+                              //  height: MediaQuery.of(context).size.height / 1.5,
                               child: Text(
                                   'Donner la plus grande capitale de l\'afique situer dans le bassin du golge de guinne et toujours occupee par le grec ? ',
                                   style: TextStyle(),
