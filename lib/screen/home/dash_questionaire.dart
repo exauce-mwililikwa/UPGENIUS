@@ -81,6 +81,17 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                       children: [
                         Container(
                           margin: EdgeInsets.only(top: 20, left: 5, right: 5),
+                          padding: EdgeInsets.only(
+                              top: 20, left: 5, right: 5, bottom: 20),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  offset: Offset(3, 2),
+                                  
+                                )
+                              ]),
                           child: Row(
                             children: [
                               Container(
@@ -91,10 +102,9 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                               ),
                               Container(
                                 child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Container(
-                                      alignment: Alignment.topLeft,
                                       child: Row(
                                         children: [
                                           Icon(
@@ -119,8 +129,92 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                                     Container(
                                       alignment: Alignment.topLeft,
                                       child: Text(
-                                        'Muti mwililikwa',
+                                        'Mutindiapala Mwililikwa',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                         textAlign: TextAlign.start,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 12,
+                                    ),
+                                    Container(
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  child: Icon(
+                                                    Icons.person_rounded,
+                                                    color: Colors.black45,
+                                                    size: 12,
+                                                  ),
+                                                ),
+                                                Container(
+                                                  child: Text(
+                                                    '1.865',
+                                                    style: TextStyle(
+                                                      color: Colors.black45,
+                                                      fontSize: 12,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 12,
+                                          ),
+                                          Container(
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  child: Icon(
+                                                    Icons.question_answer,
+                                                    color: Colors.black45,
+                                                    size: 12,
+                                                  ),
+                                                ),
+                                                Container(
+                                                  child: Text(
+                                                    ' 24',
+                                                    style: TextStyle(
+                                                      color: Colors.black45,
+                                                      fontSize: 12,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 12,
+                                          ),
+                                          Container(
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  child: Icon(
+                                                    Icons.verified,
+                                                    color: Colors.black45,
+                                                    size: 12,
+                                                  ),
+                                                ),
+                                                Container(
+                                                  child: Text(
+                                                    '750',
+                                                    style: TextStyle(
+                                                      color: Colors.black45,
+                                                      fontSize: 12,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ],
