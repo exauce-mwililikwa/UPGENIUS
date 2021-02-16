@@ -72,17 +72,34 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                   ],
                 ),
               ),
-              Container(
-                child: Row(
+              Expanded(
+                  child: SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                child: Column(
                   children: [
-                    Container(
-                      
+                    Wrap(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 20, left: 5, right: 5),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 40,
+                                width: 40,
+                                child:
+                                    Image.asset('assets/images/Java_48px.png'),
+                              ),
+                              Container(
+                                
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     )
                   ],
                 ),
-              ),
-
-
+              )),
             ],
           ),
         ),
