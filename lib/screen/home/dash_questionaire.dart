@@ -33,15 +33,18 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                       child: Row(
                         children: [
                           Expanded(
-                            child: TextField(
-                              decoration: InputDecoration(
-                                  //border: InputBorder.none,
-                                  labelText: 'Rechercher ici',
-                                  labelStyle: TextStyle(
-                                    // fontWeight: FontWeight.bold,
-                                    //  color: Colors.black45,
-                                    fontSize: 12,
-                                  )),
+                            child: Container(
+                              child: TextField(
+                                decoration: InputDecoration(
+                                    //border: InputBorder.none,
+                                    labelText: 'Rechercher ici',
+                                    labelStyle: TextStyle(
+                                      color: Colors.white,
+                                      // fontWeight: FontWeight.bold,
+                                      //  color: Colors.black45,
+                                      fontSize: 10,
+                                    )),
+                              ),
                             ),
                           ),
                           Icon(Icons.search),
@@ -188,13 +191,36 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                         Container(
                           child: Row(
                             children: [
-                              Text(
-                                'Previous',
-                                textAlign: TextAlign.start,
+                              Container(
+                                width: MediaQuery.of(context).size.width / 2,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    InkWell(
+                                      child: Text(
+                                        'Previous',
+                                        style: TextStyle(color: Colors.blue),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                              Text(
-                                'Previous',
-                                textAlign: TextAlign.end,
+                              Container(
+                                width: MediaQuery.of(context).size.width / 2,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    InkWell(
+                                      child: Text(
+                                        'Next',
+                                        style: TextStyle(color: Colors.blue),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 42,
                               ),
                               // Container(),
                             ],
