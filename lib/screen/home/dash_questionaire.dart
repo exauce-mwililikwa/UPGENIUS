@@ -90,7 +90,41 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                                     Image.asset('assets/images/Java_48px.png'),
                               ),
                               Container(
-                                
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Row(
+                                        children: [
+                                          Icon(
+                                            Icons.calendar_today,
+                                            size: 12,
+                                          ),
+                                          Text('12/04/2009'),
+                                          SizedBox(
+                                            width: 22,
+                                          ),
+                                          Icon(
+                                            Icons.timer,
+                                            size: 12,
+                                          ),
+                                          Text(
+                                            '08:42:32',
+                                            // textAlign: TextAlign.end,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Text(
+                                        'Muti mwililikwa',
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
