@@ -15,9 +15,41 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.red,
+                  color: Colors.blueAccent,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(27),
+                    bottomRight: Radius.circular(27),
+                  ),
                 ),
-                child: Column(children: []),
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 3,
+                padding: EdgeInsets.only(left: 15, right: 15),
+                child: Column(
+                  children: [
+                    Container(
+                      child: Text('Programmation'),
+                    ),
+                    Container(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  // border: InputBorder.none,
+                                  labelText: 'Rechercher ici',
+                                  labelStyle: TextStyle(
+                                    // fontWeight: FontWeight.bold,
+                                    //  color: Colors.black45,
+                                    fontSize: 12,
+                                  )),
+                            ),
+                          ),
+                          Icon(Icons.search),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Expanded(
                   child: SingleChildScrollView(
@@ -86,7 +118,7 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
                                       ),
                                     ),
                                     SizedBox(
-                                      height: 5,
+                                      height: 12,
                                     ),
                                     Container(
                                       alignment: Alignment.topLeft,
