@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dashboard.dart';
+
 import 'profil.dart';
 import 'dash_questionaire.dart';
 
@@ -31,6 +31,7 @@ class _Dashboard1State extends State<Dashboard1> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        
         body: Container(
           child: Column(
             children: [

@@ -145,7 +145,7 @@ class _ListQuestionnaireState extends State<ListQuestionnaire> {
                                               ),
                                             ),
                                             Text(
-                                              'EXAUCE',
+                                              'EXAUCER',
                                               style: TextStyle(
                                                 color: Colors.white,
                                               ),
