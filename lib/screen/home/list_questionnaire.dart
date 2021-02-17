@@ -75,9 +75,6 @@ class _ListQuestionnaireState extends State<ListQuestionnaire> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 7,
-                                ),
                                 Container(
                                   child: Row(
                                     children: [
@@ -98,9 +95,6 @@ class _ListQuestionnaireState extends State<ListQuestionnaire> {
                                       ),
                                     ],
                                   ),
-                                ),
-                                SizedBox(
-                                  height: 7,
                                 ),
                                 Container(
                                   child: Row(
@@ -144,17 +138,11 @@ class _ListQuestionnaireState extends State<ListQuestionnaire> {
                                                 color: Colors.white,
                                               ),
                                             ),
-                                            SizedBox(
-                                              height: 7,
-                                            ),
                                             Text(
                                               'MWILILIKWA',
                                               style: TextStyle(
                                                 color: Colors.white,
                                               ),
-                                            ),
-                                            SizedBox(
-                                              height: 7,
                                             ),
                                             Text(
                                               'EXAUCE',
