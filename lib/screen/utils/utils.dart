@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:upGenius/screen/home/list_questionnaire.dart';
-
+final _scaffoldKey = GlobalKey<ScaffoldState>();
 class Utils {
   Widget question() {
     return Container(

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:upGenius/screen/home/list_progam.dart';
 
 import 'profil.dart';
 import 'dash_questionaire.dart';
+import 'list_questionnaire.dart';
 
 class Dashboard1 extends StatefulWidget {
   @override
@@ -63,7 +65,7 @@ class _Dashboard1State extends State<Dashboard1> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) {
-                                          return Dashboard1();
+                                          return ListeProgram();
                                         },
                                       ),
                                     );
@@ -73,7 +75,7 @@ class _Dashboard1State extends State<Dashboard1> {
                                     alignment: Alignment.center,
                                     width: MediaQuery.of(context).size.width,
                                     child: Text(
-                                      'Login',
+                                      'Mon Programme',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 18,
@@ -96,20 +98,21 @@ class _Dashboard1State extends State<Dashboard1> {
         ),
         body: Container(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //    Container(
+              IconButton(
+                  icon: Icon(Icons.menu),
+                  onPressed: () {
+                    _scaffoldKey.currentState.openDrawer();
+                  }),
+
               Container(
-                margin: EdgeInsets.only(top: 24, left: 5, right: 5, bottom: 34),
+                margin: EdgeInsets.only(left: 5, right: 5, bottom: 34),
                 // margin: EdgeInsets.all(7),
                 child: Column(
                   children: [
                     Row(
                       children: [
-                        IconButton(
-                            icon: Icon(Icons.menu),
-                            onPressed: () {
-                              _scaffoldKey.currentState.openDrawer();
-                            }),
                         Container(
                           width: MediaQuery.of(context).size.width / 1.5,
                           child: Column(

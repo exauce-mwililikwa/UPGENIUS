@@ -16,6 +16,7 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
       child: Scaffold(
         body: Container(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 decoration: BoxDecoration(
