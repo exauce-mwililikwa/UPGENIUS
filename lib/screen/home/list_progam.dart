@@ -84,7 +84,7 @@ class _ListeProgramState extends State<ListeProgram> {
                                                 ),
                                                 Container(
                                                     child: Text(
-                                                  ' 1 024',
+                                                  ' EFFECTUER  : 1 024',
                                                   style: TextStyle(
                                                     color: Colors.white,
                                                   ),
@@ -103,7 +103,27 @@ class _ListeProgramState extends State<ListeProgram> {
                                                 ),
                                                 Container(
                                                   child: Text(
-                                                    ' 250',
+                                                    ' EN TTENTE   : 250',
+                                                    style: TextStyle(
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                          Container(
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  height: 18,
+                                                  child: Image.asset(
+                                                    "assets/images/Ok_48px.png",
+                                                  ),
+                                                ),
+                                                Container(
+                                                  child: Text(
+                                                    ' EN COURS: 0',
                                                     style: TextStyle(
                                                       color: Colors.white,
                                                     ),
@@ -123,6 +143,36 @@ class _ListeProgramState extends State<ListeProgram> {
                           ),
                         ),
                       ],
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 12),
+                child: Text('ENTRER LE CODE DU NOUVEAU TRAVAIL'),
+              ),
+              Container(
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(left: 12, right: 12),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              margin: EdgeInsets.only(left: 2.5, right: 2.5),
+                              child: TextField(
+                              
+                                obscureText: true,
+                                decoration: InputDecoration(
+                                    //border: InputBorder.none,
+
+                                    ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
