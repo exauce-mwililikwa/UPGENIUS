@@ -44,7 +44,7 @@ class _ListQuestionnaireState extends State<ListQuestionnaire> {
                       ),
                     ),
                     SizedBox(
-                      height: 12,
+                      height: 8,
                     ),
                     Container(
                       child: Row(
@@ -184,6 +184,17 @@ class _ListQuestionnaireState extends State<ListQuestionnaire> {
                         ],
                       ),
                     ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Container(
+                      child: Text(
+                        'INTERROGATION DE RECUPERATION',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),

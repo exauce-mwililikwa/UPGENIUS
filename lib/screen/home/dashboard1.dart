@@ -40,7 +40,56 @@ class _Dashboard1State extends State<Dashboard1> {
             height: MediaQuery.of(context).size.height,
             child: Column(
               children: [
-                Container(),
+                Container(
+                  child: Column(
+                    children: [
+                      Container(
+                        //margin: EdgeInsets.only(top: 24),
+                        //width: 150,
+                        height: MediaQuery.of(context).size.height / 2.7,
+                        color: Colors.red,
+                        // child: Text('Parametre'),
+                      ),
+                      Container(
+                        height: MediaQuery.of(context).size.height / 2.3,
+                        child: Column(
+                          children: [
+                            ButtonBar(
+                              children: [
+                                RaisedButton(
+                                  color: Theme.of(context).accentColor,
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return Dashboard1();
+                                        },
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    padding: EdgeInsets.all(10),
+                                    alignment: Alignment.center,
+                                    width: MediaQuery.of(context).size.width,
+                                    child: Text(
+                                      'Login',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

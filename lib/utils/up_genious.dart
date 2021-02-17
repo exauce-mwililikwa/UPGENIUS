@@ -10,6 +10,7 @@ class UpGenius extends StatelessWidget {
         scaffoldBackgroundColor: Color(0xFFF5F5F5),
       ),
       home: Login(),
+      
     );
   }
 }
