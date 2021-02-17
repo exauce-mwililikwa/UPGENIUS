@@ -148,6 +148,23 @@ class _ListeProgramState extends State<ListeProgram> {
                 ),
               ),
               Container(
+                margin: EdgeInsets.symmetric(vertical: 10.0),
+
+                height: 30.0,
+                child: ListView(
+                  physics: BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Container(
+                      width: 40.0,
+                      child: Image.asset("assets/images/Html 5_48px.png"),
+                    ),
+
+                    // Container
+                  ], // <Widget>[]
+                ), //ListView
+              ),
+              Container(
                 padding: EdgeInsets.only(top: 12),
                 child: Text('ENTRER LE CODE DU NOUVEAU TRAVAIL'),
               ),
@@ -162,7 +179,6 @@ class _ListeProgramState extends State<ListeProgram> {
                             child: Container(
                               margin: EdgeInsets.only(left: 2.5, right: 2.5),
                               child: TextField(
-                              
                                 obscureText: true,
                                 decoration: InputDecoration(
                                     //border: InputBorder.none,
@@ -178,24 +194,26 @@ class _ListeProgramState extends State<ListeProgram> {
                 ),
               ),
               Container(
-              child:Expanded(
-                child: SingleChildScrollView(
-                   physics: BouncingScrollPhysics(),
-                   child: Column(
-                     children: [
-                       Wrap(
-                         
-                       ),
-                     ],
-                   ),
+                child: Expanded(
+                  child: SingleChildScrollView(
+                    physics: BouncingScrollPhysics(),
+                    child: Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: 12, left: 10, right: 10),
+                          width: MediaQuery.of(context).size.width,
+                          height: MediaQuery.of(context).size.height / 2,
+                          color: Colors.red,
+                        ),
+                        //Container
+                      ],
+                    ),
+                  ),
                 ),
               ),
-            ),
             ],
-            
           ),
         ),
-        
       ),
     );
   }
