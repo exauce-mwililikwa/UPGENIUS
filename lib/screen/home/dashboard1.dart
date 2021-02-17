@@ -26,12 +26,25 @@ class _Dashboard1State extends State<Dashboard1> {
   ];
 
   List<int> nombre = [3, 8, 10, 20, 1];
-
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      //top: false,
       child: Scaffold(
-        
+        key: _scaffoldKey,
+        //  appBar: AppBar(),
+        drawer: Drawer(
+          child: SizedBox(
+            width: 150,
+            height: MediaQuery.of(context).size.height,
+            child: Column(
+              children: [
+                Container(),
+              ],
+            ),
+          ),
+        ),
         body: Container(
           child: Column(
             children: [
@@ -43,8 +56,13 @@ class _Dashboard1State extends State<Dashboard1> {
                   children: [
                     Row(
                       children: [
+                        IconButton(
+                            icon: Icon(Icons.menu),
+                            onPressed: () {
+                              _scaffoldKey.currentState.openDrawer();
+                            }),
                         Container(
-                          width: MediaQuery.of(context).size.width / 1.2,
+                          width: MediaQuery.of(context).size.width / 1.5,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
