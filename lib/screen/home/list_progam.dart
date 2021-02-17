@@ -177,9 +177,25 @@ class _ListeProgramState extends State<ListeProgram> {
                   ],
                 ),
               ),
+              Container(
+              child:Expanded(
+                child: SingleChildScrollView(
+                   physics: BouncingScrollPhysics(),
+                   child: Column(
+                     children: [
+                       Wrap(
+                         
+                       ),
+                     ],
+                   ),
+                ),
+              ),
+            ),
             ],
+            
           ),
         ),
+        
       ),
     );
   }
