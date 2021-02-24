@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:upGenius/screen/home/list_progam.dart';
+import 'package:upGenius/screen/utils/utils.dart';
 
 import 'profil.dart';
 import 'dash_questionaire.dart';
@@ -9,6 +10,8 @@ class Dashboard1 extends StatefulWidget {
   @override
   _Dashboard1State createState() => _Dashboard1State();
 }
+
+var ut = Utils();
 
 class _Dashboard1State extends State<Dashboard1> {
   List<String> images = [
@@ -32,80 +35,14 @@ class _Dashboard1State extends State<Dashboard1> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      //top: false,
       child: Scaffold(
         key: _scaffoldKey,
-        //  appBar: AppBar(),
-        drawer: Drawer(
-          child: SizedBox(
-            width: 150,
-            height: MediaQuery.of(context).size.height,
-            child: Column(
-              children: [
-                Container(
-                  child: Column(
-                    children: [
-                      Container(
-                        //margin: EdgeInsets.only(top: 24),
-                        //width: 150,
-                        height: MediaQuery.of(context).size.height / 2.7,
-                        color: Colors.red,
-                        // child: Text('Parametre'),
-                      ),
-                      Container(
-                        height: MediaQuery.of(context).size.height / 2.3,
-                        child: Column(
-                          children: [
-                            ButtonBar(
-                              children: [
-                                RaisedButton(
-                                  color: Theme.of(context).accentColor,
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) {
-                                          return ListeProgram();
-                                        },
-                                      ),
-                                    );
-                                  },
-                                  child: Container(
-                                    padding: EdgeInsets.all(10),
-                                    alignment: Alignment.center,
-                                    width: MediaQuery.of(context).size.width,
-                                    child: Text(
-                                      'Mon Programme',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
+        drawer: ut.dropMenu(context),
         body: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconButton(
-                  icon: Icon(Icons.menu),
-                  onPressed: () {
-                    _scaffoldKey.currentState.openDrawer();
-                  }),
-
+              ut.appbarC(context, _scaffoldKey,"ACCEUIL"),
               Container(
                 margin: EdgeInsets.only(left: 5, right: 5, bottom: 34),
                 // margin: EdgeInsets.all(7),
@@ -136,26 +73,26 @@ class _Dashboard1State extends State<Dashboard1> {
                             ],
                           ),
                         ),
-                        Container(
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) {
-                                    return Profil();
-                                  },
-                                ),
-                              );
-                            },
-                            child: CircleAvatar(
-                              backgroundImage:
-                                  AssetImage('assets/images/profil.png'),
-                              //     Image.asset('assets/images/profil.png'),
-                            ),
-                          ),
-                          //    width: MediaQuery.of(context).size.width / 2,
-                        ),
+                        // Container(
+                        //   child: InkWell(
+                        //     onTap: () {
+                        //       Navigator.push(
+                        //         context,
+                        //         MaterialPageRoute(
+                        //           builder: (context) {
+                        //             return Profil();
+                        //           },
+                        //         ),
+                        //       );
+                        //     },
+                        //     child: CircleAvatar(
+                        //       backgroundImage:
+                        //           AssetImage('assets/images/profil.png'),
+                        //       //     Image.asset('assets/images/profil.png'),
+                        //     ),
+                        //   ),
+                        //   //    width: MediaQuery.of(context).size.width / 2,
+                        // ),
                       ],
                     ),
                   ],
@@ -188,7 +125,7 @@ class _Dashboard1State extends State<Dashboard1> {
 
   Widget typetext(String typeName, String photo, int nombreQuestion) {
     return Container(
-      margin: EdgeInsets.only(top: 10, left: 5, right: 5),
+      margin: EdgeInsets.only(top: 10, left: 10, right: 5),
 
       //height: MediaQuery.of(context).size.height / 4,
       width: MediaQuery.of(context).size.width / 2 - 20,
