@@ -272,7 +272,7 @@ class _LoginState extends State<Login> {
           },
         ),
         Text(
-          "Inscription",
+          "Connexion",
           style: GoogleFonts.dmSans(
             textStyle: TextStyle(
               color: Colors.white,
