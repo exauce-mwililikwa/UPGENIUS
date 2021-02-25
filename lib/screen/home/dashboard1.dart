@@ -42,8 +42,7 @@ class _Dashboard1State extends State<Dashboard1> {
             children: [
               ut.appbarC(context, _scaffoldKey, "ACCEUIL"),
               Container(
-                margin: EdgeInsets.only(left: 5, right: 5, bottom: 34),
-                // margin: EdgeInsets.all(7),
+                margin: EdgeInsets.only(left: 5, right: 5, bottom: 13),
                 child: Column(
                   children: [
                     Row(
@@ -71,32 +70,11 @@ class _Dashboard1State extends State<Dashboard1> {
                             ],
                           ),
                         ),
-                        // Container(
-                        //   child: InkWell(
-                        //     onTap: () {
-                        //       Navigator.push(
-                        //         context,
-                        //         MaterialPageRoute(
-                        //           builder: (context) {
-                        //             return Profil();
-                        //           },
-                        //         ),
-                        //       );
-                        //     },
-                        //     child: CircleAvatar(
-                        //       backgroundImage:
-                        //           AssetImage('assets/images/profil.png'),
-                        //       //     Image.asset('assets/images/profil.png'),
-                        //     ),
-                        //   ),
-                        //   //    width: MediaQuery.of(context).size.width / 2,
-                        // ),
                       ],
                     ),
                   ],
                 ),
               ),
-              // ),
               Expanded(
                 child: SingleChildScrollView(
                   physics: BouncingScrollPhysics(),

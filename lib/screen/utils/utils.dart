@@ -232,7 +232,6 @@ class Utils {
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.black,
-                  // fontWeight: FontWeight.bold
                 ),
               ),
             ],
