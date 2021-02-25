@@ -9,9 +9,9 @@ class NewProgramme extends StatefulWidget {
 var ut = Utils();
 
 class _NewProgrammeState extends State<NewProgramme> {
-  @override
-  final _scaffoldKey = GlobalKey<ScaffoldState>();
 
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(

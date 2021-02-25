@@ -24,7 +24,7 @@ class UpGenius extends StatelessWidget {
       home: IntroPage(),
       routes: {
         Login.rootName: (context) => Login(),
-        SignUp.routeName: (context)=> SignUp(),
+        SignUp.routeName: (context) => SignUp(),
       },
     );
   }

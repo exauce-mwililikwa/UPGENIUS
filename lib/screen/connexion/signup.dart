@@ -93,6 +93,34 @@ class _SignUpState extends State<SignUp> {
                               ),
                             ),
                             _phoneNumber(hint: "contacts"),
+                            FlatButton(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5)),
+                              color: Color(0xFFFFC700).withOpacity(.5),
+                              onPressed: () {
+                                // Navigator.push(
+                                //   context,
+                                //   MaterialPageRoute(
+                                //     builder: (context) {
+
+                                //     },
+                                //   ),
+                                // );
+                              },
+                              child: Container(
+                                padding: EdgeInsets.all(10),
+                                alignment: Alignment.center,
+                                width: MediaQuery.of(context).size.width,
+                                child: Text(
+                                  'Enregistrer',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),

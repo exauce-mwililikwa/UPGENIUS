@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:upGenius/screen/home/list_progam.dart';
 import 'package:upGenius/screen/utils/utils.dart';
 
-import 'profil.dart';
 import 'dash_questionaire.dart';
-import 'list_questionnaire.dart';
 
 class Dashboard1 extends StatefulWidget {
   @override
@@ -42,7 +39,7 @@ class _Dashboard1State extends State<Dashboard1> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ut.appbarC(context, _scaffoldKey,"ACCEUIL"),
+              ut.appbarC(context, _scaffoldKey, "ACCEUIL"),
               Container(
                 margin: EdgeInsets.only(left: 5, right: 5, bottom: 34),
                 // margin: EdgeInsets.all(7),
