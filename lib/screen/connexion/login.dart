@@ -141,7 +141,7 @@ class _LoginState extends State<Login> {
                                 child: TextField(
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    labelText: 'Identifiant ',
+                                    labelText: 'Identifiant',
                                     labelStyle: GoogleFonts.dmSans(
                                       textStyle: TextStyle(
                                         color: Colors.white,
@@ -197,7 +197,14 @@ class _LoginState extends State<Login> {
                               borderRadius: BorderRadius.circular(5)),
                           color: Color(0xFFFFC700).withOpacity(.5),
                           onPressed: () {
-                            Navigator.pushNamed(context, Dashboard1.rootName);
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return Dashboard1();
+                                },
+                              ),
+                            );
                           },
                           child: Container(
                             padding: EdgeInsets.all(10),
