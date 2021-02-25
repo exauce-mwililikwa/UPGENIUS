@@ -136,28 +136,26 @@ class Utils {
                               ),
                               child: Row(
                                 children: [
-                                  Container(
-                                    child: Icon(
-                                      Icons.admin_panel_settings,
-                                      color: Colors.lightBlueAccent,
-                                    ),
+                                  Icon(
+                                    Icons.admin_panel_settings,
+                                    color: Colors.lightBlueAccent,
                                   ),
-                                  Container(
-                                    child: InkWell(
-                                      onTap: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) {
-                                              return TeacherDashboard();
-                                            },
-                                          ),
-                                        );
-                                      },
-                                      child: Text('    Admin',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                          )),
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) {
+                                            return TeacherDashboard();
+                                          },
+                                        ),
+                                      );
+                                    },
+                                    child: Text(
+                                      '    Admin',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -186,15 +184,6 @@ class Utils {
                                 ],
                               ),
                             ),
-                            Container(
-                              child: Text(
-                                'Upgenius pour Android v1.0.0',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black38),
-                              ),
-                            ),
                           ],
                         ),
                       ),
@@ -202,6 +191,13 @@ class Utils {
                   ],
                 ),
               ),
+            ),
+            Text(
+              'Upgenius pour Android v1.0.0',
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black38),
             ),
           ],
         ),
