@@ -4,13 +4,16 @@ import 'package:upGenius/screen/utils/utils.dart';
 import 'dash_questionaire.dart';
 
 class Dashboard1 extends StatefulWidget {
+   static String rootName = "/login";
   @override
+  
   _Dashboard1State createState() => _Dashboard1State();
 }
 
 var ut = Utils();
 
 class _Dashboard1State extends State<Dashboard1> {
+  
   List<String> images = [
     "Surprised_96px.png",
     "Book_96px.png",

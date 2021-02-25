@@ -197,14 +197,7 @@ class _LoginState extends State<Login> {
                               borderRadius: BorderRadius.circular(5)),
                           color: Color(0xFFFFC700).withOpacity(.5),
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return Dashboard1();
-                                },
-                              ),
-                            );
+                            Navigator.pushNamed(context, Dashboard1.rootName);
                           },
                           child: Container(
                             padding: EdgeInsets.all(10),
