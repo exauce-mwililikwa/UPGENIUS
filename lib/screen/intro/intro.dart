@@ -42,7 +42,7 @@ class _IntroPageState extends State<IntroPage> {
                           child: SvgPicture.asset("assets/svg/intro.svg"),
                         ),
                         Text(
-                          "Bievenu dans notre plate formes de cours upgenius, inscrivez vous ou connecter vous pour plus de fonctionnalites de upgenius",
+                          "Bievenu dans notre plate forme de cours upgenius, inscrivez-vous ou connectez-vous pour plus de fonctionnalites de upgenius",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.dmSans(
                             textStyle: TextStyle(
