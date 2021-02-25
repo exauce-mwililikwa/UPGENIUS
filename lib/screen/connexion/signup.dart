@@ -213,7 +213,7 @@ class _SignUpState extends State<SignUp> {
               controller: controller,
               decoration: InputDecoration(
                 suffixIcon: Icon(
-                  Icons.accessibility_new_outlined,
+                  Icons.remove_red_eye_sharp,
                   color: Colors.white,
                 ),
                 border: InputBorder.none,
