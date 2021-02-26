@@ -102,8 +102,6 @@ class _Dashboard1State extends State<Dashboard1> {
   Widget typetext(String typeName, String photo, int nombreQuestion) {
     return Container(
       margin: EdgeInsets.only(top: 10, left: 10, right: 5),
-
-      //height: MediaQuery.of(context).size.height / 4,
       width: MediaQuery.of(context).size.width / 2 - 20,
       decoration: BoxDecoration(
           color: Colors.white,
@@ -170,7 +168,6 @@ class _Dashboard1State extends State<Dashboard1> {
                     '$nombreQuestion Question',
                     style: TextStyle(
                       color: Colors.black87,
-                      //fontWeight: FontWeight.bold,
                       fontSize: 13,
                     ),
                   ),

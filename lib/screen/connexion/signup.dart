@@ -98,14 +98,7 @@ class _SignUpState extends State<SignUp> {
                                   borderRadius: BorderRadius.circular(5)),
                               color: Color(0xFFFFC700).withOpacity(.5),
                               onPressed: () {
-                                // Navigator.push(
-                                //   context,
-                                //   MaterialPageRoute(
-                                //     builder: (context) {
-
-                                //     },
-                                //   ),
-                                // );
+                           
                               },
                               child: Container(
                                 padding: EdgeInsets.all(10),
