@@ -90,12 +90,15 @@ class Utils {
                         child: Column(
                           children: [
                             Container(
+                              margin: EdgeInsets.only(top: 12),
                               width: MediaQuery.of(context).size.width,
                               color: Colors.white38,
                               child: Container(
                                 child: Column(
                                   children: [
                                     Container(
+                                      height: 60,
+                                      width: 60,
                                       child: Image.asset(
                                           "assets/images/avtar-1.png"),
                                     ),
@@ -110,17 +113,18 @@ class Utils {
                                       ),
                                     ),
                                     Container(
-                                      decoration: BoxDecoration(
-                                          border: Border.all(),
-                                          borderRadius: BorderRadius.only(
-                                            topLeft: Radius.circular(12),
-                                            bottomLeft: Radius.circular(12),
-                                            topRight: Radius.circular(12),
-                                            bottomRight: Radius.circular(12),
-                                          )),
+                                      // decoration: BoxDecoration(
+                                      //     border: Border.all(),
+                                      //     borderRadius: BorderRadius.only(
+                                      //       topLeft: Radius.circular(12),
+                                      //       bottomLeft: Radius.circular(12),
+                                      //       topRight: Radius.circular(12),
+                                      //       bottomRight: Radius.circular(12),
+                                      //     )),
                                       child: Text(
                                         ' Profession ',
                                         style: TextStyle(
+                                          fontSize: 12,
                                           color: Colors.black,
                                         ),
                                       ),
@@ -128,6 +132,9 @@ class Utils {
                                   ],
                                 ),
                               ),
+                            ),
+                            Divider(
+                              height: 12,
                             ),
                             Container(
                               margin: EdgeInsets.only(
@@ -154,7 +161,7 @@ class Utils {
                                     child: Text(
                                       '    Admin',
                                       style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 12,
                                       ),
                                     ),
                                   ),
@@ -163,22 +170,44 @@ class Utils {
                             ),
                             Container(
                               margin: EdgeInsets.only(
-                                  left: MediaQuery.of(context).size.width / 15),
+                                  left: MediaQuery.of(context).size.width / 18),
                               child: Column(
                                 children: [
-                                  ut.menu(Icons.add_chart, "Nouveau Programme",
-                                      context, Colors.blueAccent),
-                                  ut.menu(
-                                      Icons.view_agenda_outlined,
-                                      "Mes Programmes",
-                                      context,
-                                      Colors.blueGrey),
+                                  Row(
+                                    children: [
+                                      ut.menu(
+                                          Icons.view_agenda_outlined,
+                                          "Mes Programmes",
+                                          context,
+                                          Colors.blueGrey),
+                                      Container(
+                                          margin: EdgeInsets.only(
+                                              left: 0, bottom: 7),
+                                          padding: EdgeInsets.only(
+                                              top: 2,
+                                              bottom: 2,
+                                              left: 4,
+                                              right: 4),
+                                          decoration: BoxDecoration(
+                                            color: Colors.red,
+                                            borderRadius:
+                                                BorderRadius.circular(12),
+                                          ),
+                                          child: Text(
+                                            '2',
+                                            style: TextStyle(
+                                                fontSize: 8,
+                                                color: Colors.white),
+                                          ))
+                                    ],
+                                  ),
                                   ut.menu(Icons.menu_book_sharp, "Mes Cours",
                                       context, Colors.greenAccent),
                                   ut.menu(Icons.account_circle_sharp, "Compte",
                                       context, Colors.tealAccent),
-                                  ut.menu(Icons.settings, "Parametre", context,
-                                      Colors.pinkAccent),
+                                  Divider(
+                                    height: 6,
+                                  ),
                                   ut.menu(Icons.lock_outlined, "Deconnexion",
                                       context, Colors.black38),
                                 ],
@@ -192,12 +221,15 @@ class Utils {
                 ),
               ),
             ),
-            Text(
-              'Upgenius pour Android v1.0.0',
-              style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black38),
+            Container(
+              margin: EdgeInsets.only(bottom: 10),
+              child: Text(
+                'Upgenius pour Android v1.0.0',
+                style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black38),
+              ),
             ),
           ],
         ),
@@ -207,6 +239,7 @@ class Utils {
 
   Widget menu(IconData icon, String text, BuildContext context, Color couleur) {
     return Container(
+      margin: EdgeInsets.only(top: 0),
       padding: EdgeInsets.only(left: 12),
       child: InkWell(
         onTap: () {
@@ -230,7 +263,7 @@ class Utils {
               Text(
                 "$text",
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 12,
                   color: Colors.black,
                 ),
               ),
