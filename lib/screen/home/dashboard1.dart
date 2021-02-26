@@ -165,7 +165,7 @@ class _Dashboard1State extends State<Dashboard1> {
                 ),
                 Container(
                   child: Text(
-                    '$nombreQuestion Question',
+                    '$nombreQuestion Questions',
                     style: TextStyle(
                       color: Colors.black87,
                       fontSize: 13,
