@@ -99,8 +99,19 @@ class Utils {
                                     Container(
                                       height: 60,
                                       width: 60,
-                                      child: Image.asset(
-                                          "assets/images/avtar-1.png"),
+                                      child: CircleAvatar(
+                                        child: Container(
+                                          margin: EdgeInsets.only(
+                                              left: 39, bottom: 34),
+                                          // child: Icon(
+                                          //   Icons.notifications_active,
+                                          //   color: Colors.redAccent,
+                                          // ),
+                                        ),
+                                        backgroundColor: Colors.transparent,
+                                        backgroundImage: AssetImage(
+                                            'assets/images/avtar-5.png'),
+                                      ),
                                     ),
                                     Container(
                                       margin: EdgeInsets.all(5),
@@ -179,30 +190,56 @@ class Utils {
                                           Icons.view_agenda_outlined,
                                           "Mes Programmes",
                                           context,
-                                          Colors.blueGrey),
+                                          Colors.blueGrey,ListeProgram()),
                                       Container(
-                                          margin: EdgeInsets.only(
-                                              left: 0, bottom: 7),
-                                          padding: EdgeInsets.only(
-                                              top: 2,
-                                              bottom: 2,
-                                              left: 4,
-                                              right: 4),
-                                          decoration: BoxDecoration(
-                                            color: Colors.red,
-                                            borderRadius:
-                                                BorderRadius.circular(12),
-                                          ),
-                                          child: Text(
-                                            '2',
-                                            style: TextStyle(
-                                                fontSize: 8,
-                                                color: Colors.white),
-                                          ))
+                                        margin:
+                                            EdgeInsets.only(left: 0, bottom: 8),
+                                        padding: EdgeInsets.only(
+                                            top: 2,
+                                            bottom: 2,
+                                            left: 4,
+                                            right: 4),
+                                        decoration: BoxDecoration(
+                                          color: Colors.red,
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
+                                        child: Text(
+                                          '2',
+                                          style: TextStyle(
+                                              fontSize: 8, color: Colors.white),
+                                        ),
+                                      ),
                                     ],
                                   ),
-                                  ut.menu(Icons.menu_book_sharp, "Mes Cours",
-                                      context, Colors.greenAccent),
+                                  Row(
+                                    children: [
+                                      ut.menu(
+                                          Icons.book_sharp,
+                                          "Mes Cours",
+                                          context,
+                                          Colors.deepOrangeAccent.withRed(300)),
+                                      Container(
+                                        margin:
+                                            EdgeInsets.only(left: 0, bottom: 8),
+                                        padding: EdgeInsets.only(
+                                            top: 2,
+                                            bottom: 2,
+                                            left: 4,
+                                            right: 4),
+                                        decoration: BoxDecoration(
+                                          color: Colors.red,
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
+                                        child: Text(
+                                          '+99',
+                                          style: TextStyle(
+                                              fontSize: 8, color: Colors.white),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                   ut.menu(Icons.account_circle_sharp, "Compte",
                                       context, Colors.tealAccent),
                                   Divider(
@@ -237,7 +274,8 @@ class Utils {
     );
   }
 
-  Widget menu(IconData icon, String text, BuildContext context, Color couleur) {
+  Widget menu(IconData icon, String text, BuildContext context, Color couleur,
+      Function fx) {
     return Container(
       margin: EdgeInsets.only(top: 0),
       padding: EdgeInsets.only(left: 12),
@@ -247,13 +285,13 @@ class Utils {
             context,
             MaterialPageRoute(
               builder: (context) {
-                return ListeProgram();
+                return fx();
               },
             ),
           );
         },
         child: Container(
-          padding: EdgeInsets.only(top: 10, bottom: 10),
+          padding: EdgeInsets.only(top: 6.5, bottom: 6.5),
           child: Row(
             children: [
               Icon(icon, size: 20, color: couleur),
