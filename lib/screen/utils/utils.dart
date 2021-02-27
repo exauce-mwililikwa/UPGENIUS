@@ -190,7 +190,7 @@ class Utils {
                                           Icons.view_agenda_outlined,
                                           "Mes Programmes",
                                           context,
-                                          Colors.blueGrey,ListeProgram()),
+                                          Colors.blueGrey),
                                       Container(
                                         margin:
                                             EdgeInsets.only(left: 0, bottom: 8),
@@ -274,8 +274,7 @@ class Utils {
     );
   }
 
-  Widget menu(IconData icon, String text, BuildContext context, Color couleur,
-      Function fx) {
+  Widget menu(IconData icon, String text, BuildContext context, Color couleur) {
     return Container(
       margin: EdgeInsets.only(top: 0),
       padding: EdgeInsets.only(left: 12),
@@ -285,7 +284,7 @@ class Utils {
             context,
             MaterialPageRoute(
               builder: (context) {
-                return fx();
+                return ListeProgram();
               },
             ),
           );
@@ -341,8 +340,6 @@ class Utils {
           )),
       margin: EdgeInsets.only(top: 6, left: 10, right: 10),
       padding: EdgeInsets.only(right: 6),
-      //  width: MediaQuery.of(context).size.width,
-      // height: MediaQuery.of(context).size.height / 2.1,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
