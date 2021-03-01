@@ -111,7 +111,7 @@ class _LoginState extends State<Login> {
                         ),
                         Text(
                           // TextAlign.center,
-                          'Entrer votre identifiant et votre mot de passe pour vous connecter',
+                          'Entrer votr identifiant et votre mot de passe pour vous connecter',
                           style: GoogleFonts.dmSans(
                               textStyle: TextStyle(
                             color: Colors.grey[500],
