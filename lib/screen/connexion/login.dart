@@ -240,7 +240,7 @@ class _LoginState extends State<Login> {
                   ),
                   children: [
                     TextSpan(
-                      text: "Créer",
+                      text: "Créer un",
                       style: GoogleFonts.dmSans(
                         textStyle: TextStyle(
                           color: Color(0xFFFFC700).withOpacity(.5),
