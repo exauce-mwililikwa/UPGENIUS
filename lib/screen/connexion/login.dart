@@ -276,7 +276,7 @@ class _LoginState extends State<Login> {
           style: GoogleFonts.dmSans(
             textStyle: TextStyle(
               color: Colors.white,
-              fontSize: 20,
+              fontSize: 20.3,
             ),
           ),
         )
