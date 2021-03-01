@@ -131,7 +131,8 @@ class Utils {
                                       //       bottomLeft: Radius.circular(12),
                                       //       topRight: Radius.circular(12),
                                       //       bottomRight: Radius.circular(12),
-                                      //     )),
+                                      //     ),
+                                      //),
                                       child: Text(
                                         ' Profession ',
                                         style: TextStyle(
