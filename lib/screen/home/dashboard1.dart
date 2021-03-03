@@ -104,7 +104,7 @@ class _Dashboard1State extends State<Dashboard1> {
       margin: EdgeInsets.only(top: 10, left: 10, right: 5),
       width: MediaQuery.of(context).size.width / 2 - 20,
       decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.blueAccent,
           boxShadow: <BoxShadow>[
             BoxShadow(
               color: Colors.black12,
