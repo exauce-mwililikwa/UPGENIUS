@@ -18,8 +18,8 @@ class UpGenius extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        //  scaffoldBackgroundColor: Color(0xFFF5F5F5),
-        scaffoldBackgroundColor: Color(0XFF00589E),
+        scaffoldBackgroundColor: Color(0xFFF5F5F5),
+        //scaffoldBackgroundColor: Color(0XFF00589E),
         primaryColor: Color(0XFF00589E),
       ),
       home: IntroPage(),
