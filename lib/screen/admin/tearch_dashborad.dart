@@ -10,6 +10,7 @@ class TeacherDashboard extends StatefulWidget {
 }
 
 var ut = Utils();
+String dropdownValue = 'One';
 
 class _TeacherDashboardState extends State<TeacherDashboard> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -21,6 +22,35 @@ class _TeacherDashboardState extends State<TeacherDashboard> {
           ? Alignment.bottomLeft
           : Alignment.topRight;
     });
+  }
+
+  Future<void> _handleClickMe() async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return CupertinoAlertDialog(
+          title: Text(
+              'Allow "Maps" to access your location while you use the app?'),
+          content: Text(
+              'Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times.'),
+          actions: <Widget>[
+            CupertinoDialogAction(
+              child: Text('Don\'t Allow'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            CupertinoDialogAction(
+              child: Text('Allow'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -235,7 +265,9 @@ class _TeacherDashboardState extends State<TeacherDashboard> {
                           actions: <Widget>[
                             CupertinoActionSheetAction(
                               child: Text('Profiteroles'),
-                              onPressed: () {/** */},
+                              onPressed: () {
+                                _handleClickMe();
+                              },
                             ),
                             CupertinoActionSheetAction(
                               child: Text('Cannolis'),
@@ -251,7 +283,52 @@ class _TeacherDashboardState extends State<TeacherDashboard> {
                             child: Text('Cancel'),
                             onPressed: () {/** */},
                           ),
-                        )
+                        ),
+                        CupertinoActivityIndicator(),
+                        CupertinoContextMenu(
+                          child: Container(
+                            width: 100,
+                            height: 60,
+                            color: Colors.red,
+                          ),
+                          actions: <Widget>[
+                            CupertinoContextMenuAction(
+                              child: const Text('Action one'),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                            ),
+                            CupertinoContextMenuAction(
+                              child: const Text('Action two'),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                            ),
+                          ],
+                        ),
+                        Container(
+                          height: 300,
+                          child: CupertinoDatePicker(
+                              mode: CupertinoDatePickerMode.dateAndTime,
+                              onDateTimeChanged: (dateTime) {}),
+                        ),
+                        Center(
+                          child: DropdownButton<String>(
+                            value: dropdownValue,
+                            onChanged: (String newValue) {
+                              setState(() {
+                                dropdownValue = newValue;
+                              });
+                            },
+                            items: <String>['One', 'Two', 'Free', 'Four']
+                                .map<DropdownMenuItem<String>>((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            }).toList(),
+                          ),
+                        ),
                       ],
                     ),
                   ),
