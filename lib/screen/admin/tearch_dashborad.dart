@@ -24,6 +24,7 @@ class _TeacherDashboardState extends State<TeacherDashboard> {
     });
   }
 
+  final _formKey = GlobalKey<FormState>();
   Future<void> _handleClickMe() async {
     return showDialog<void>(
       context: context,
@@ -245,6 +246,37 @@ class _TeacherDashboardState extends State<TeacherDashboard> {
                                     );
                                   });
                             },
+                          ),
+                        ),
+                        Form(
+                          key: _formKey,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              TextFormField(
+                                validator: (value) {
+                                  if (value.isEmpty) {
+                                    return 'Please enter some text';
+                                  }
+                                  return null;
+                                },
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 16.0),
+                                child: RaisedButton(
+                                  onPressed: () {
+                                    // Validate will return true if the form is valid, or false if
+                                    // the form is invalid.
+                                    if (_formKey.currentState.validate()) {
+                                      // Process data.
+                                    }
+                                  },
+                                  child: Text('Submit'),
+                                ),
+                              ),
+                              LinearProgressIndicator()
+                            ],
                           ),
                         ),
                         Container(
