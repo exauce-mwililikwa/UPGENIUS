@@ -9,8 +9,14 @@ class TeacherDashboard extends StatefulWidget {
   _TeacherDashboardState createState() => _TeacherDashboardState();
 }
 
+int _currentStep = 0;
 var ut = Utils();
 String dropdownValue = 'One';
+enum SingingCharacter { lafayette, jefferson }
+
+// ...
+
+SingingCharacter _character = SingingCharacter.lafayette;
 
 class _TeacherDashboardState extends State<TeacherDashboard> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -359,6 +365,90 @@ class _TeacherDashboardState extends State<TeacherDashboard> {
                                 child: Text(value),
                               );
                             }).toList(),
+                          ),
+                        ),
+                        Container(
+                          child: Column(
+                            children: <Widget>[
+                              ListTile(
+                                title: const Text('Lafayette'),
+                                leading: Radio(
+                                  value: SingingCharacter.lafayette,
+                                  groupValue: _character,
+                                  onChanged: (SingingCharacter value) {
+                                    setState(() {
+                                      _character = value;
+                                    });
+                                  },
+                                ),
+                              ),
+                              ListTile(
+                                title: const Text('Thomas Jefferson'),
+                                leading: Radio(
+                                  value: SingingCharacter.jefferson,
+                                  groupValue: _character,
+                                  onChanged: (SingingCharacter value) {
+                                    setState(
+                                      () {
+                                        _character = value;
+                                      },
+                                    );
+                                  },
+                                ),
+                              ),
+                              Stepper(
+                                currentStep: _currentStep,
+                                onStepContinue: () {
+                                  if (_currentStep >= 4) return;
+                                  setState(() {
+                                    _currentStep += 1;
+                                  });
+                                },
+                                onStepCancel: () {
+                                  if (_currentStep <= 0) return;
+                                  setState(() {
+                                    _currentStep -= 1;
+                                  });
+                                },
+                                steps: const <Step>[
+                                  Step(
+                                    title: Text('Step 1'),
+                                    content: SizedBox(
+                                      width: 100.0,
+                                      height: 100.0,
+                                    ),
+                                  ),
+                                  Step(
+                                    title: Text('Step 2'),
+                                    content: SizedBox(
+                                      width: 100.0,
+                                      height: 100.0,
+                                    ),
+                                  ),
+                                  Step(
+                                    title: Text('Step 3'),
+                                    content: SizedBox(
+                                      width: 100.0,
+                                      height: 100.0,
+                                    ),
+                                  ),
+                                  Step(
+                                    title: Text('Step 4'),
+                                    content: SizedBox(
+                                      width: 100.0,
+                                      height: 100.0,
+                                    ),
+                                  ),
+                                  Step(
+                                    title: Text('Step 5'),
+                                    content: SizedBox(
+                                      width: 100.0,
+                                      height: 100.0,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
                       ],
