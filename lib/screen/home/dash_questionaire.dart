@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:upGenius/screen/utils/utils.dart';
 
-
 class DashQuestionnaire extends StatefulWidget {
   @override
   _DashQuestionnaireState createState() => _DashQuestionnaireState();
@@ -21,7 +20,7 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ut.appbarC(context, _scaffoldKey,"MACABBETS"),
+              ut.appbarC(context, _scaffoldKey, "MACABBETS"),
               // Container(
               //   decoration: BoxDecoration(
               //     color: Colors.blueAccent,
@@ -102,7 +101,7 @@ class _DashQuestionnaireState extends State<DashQuestionnaire> {
               //                 ],
               //               ),
               //             ),
-              //             Container(
+              //  /           Container(
               //               margin: EdgeInsets.only(right: 45),
               //               child: Column(
               //                 crossAxisAlignment: CrossAxisAlignment.start,
